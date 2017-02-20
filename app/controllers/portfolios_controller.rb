@@ -3,6 +3,11 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
+
+  end
+
   def new
     @portfolio_item = Portfolio.new
   end
@@ -23,7 +28,7 @@ class PortfoliosController < ApplicationController
   def update
     @portfolio_item = Portfolio.find(params[:id])
     if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
-      redirect_to portfolios_path, notice: "Your portfolio item has been updated"
+      redirect_to portfolios_path, notice: "Portfolio item has been updated"
     else 
       render :edit
     end
