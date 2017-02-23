@@ -1,5 +1,5 @@
 <h1>Hi, <%= current_user.first_name %></h1>
-<h2>Posts</h2>
+<h2><%= link_to 'Posts', blogs_path  %></h2>
 <% @posts.each do |post| %>
   <%= post.title %><br />
 <% end %>
@@ -9,7 +9,7 @@
   <%= skill.title %> - <%= skill.percent_utilised %><br />
 <% end %>
 <br />
-<h2>Portfolio</h2>
+<h2><%= link_to 'Portfolio', portfolios_path  %></h2>
 <% @portfolios.each do |portfolio| %>
   <%= portfolio.title %><br />
 <% end %>
