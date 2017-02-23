@@ -19,6 +19,7 @@ gem 'friendly_id', '~> 5.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry-byebug', '~> 3.4'
 end
 
 group :development do
