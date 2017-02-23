@@ -1,17 +1,16 @@
 <h1>Hi, <%= current_user.first_name %></h1>
 <h2><%= link_to 'Posts', blogs_path  %></h2>
 <% @posts.each do |post| %>
-  <%= post.title %><br />
+  <%= post.title %><br>
 <% end %>
-<br />
+<br>
 <h2>Skills</h2>
 <% @skills.each do |skill| %>
-  <%= skill.title %> - <%= skill.percent_utilised %><br />
+  <%= skill.title %> - <%= skill.percent_utilised %><br>
 <% end %>
-<br />
+<br>
 <h2><%= link_to 'Portfolio', portfolios_path  %></h2>
 <% @portfolios.each do |portfolio| %>
-  <%= portfolio.title %><br />
+  <%= portfolio.title %><br>
 <% end %>
 
-<hr />
