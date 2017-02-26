@@ -6,7 +6,7 @@ class User < ApplicationRecord
   ## with caution!   ##
   ## The multiple option can be set to true if you need users to have multiple 
   ## roles.       ##
-  petergate(roles: [:admin, :editor], multiple: false)                        ##
+  petergate(roles: [:site_admin], multiple: false)                        ##
   ##############################################################################
  
 
